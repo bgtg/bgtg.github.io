@@ -7,30 +7,7 @@
 </head>
 <body>
     <script>
-        // Fungsi untuk mendapatkan bahasa sistem yang digunakan oleh pengguna
-        function getSystemLanguage() {
-        // Gunakan navigator.language untuk mendapatkan kode bahasa sistem pengguna
-        const systemLanguage = navigator.language || navigator.userLanguage;
-        // Ambil kode bahasa utama (tanpa subtag)
-        const primaryLanguage = systemLanguage.split('-')[0];
-        return primaryLanguage;
-        }
-
-        // Fungsi untuk melakukan pengalihan ke URL yang sesuai berdasarkan bahasa sistem pengguna
-        function redirectToLanguagePage(primaryLanguage) {
-        let languageCode = 'en'; // Bahasa default
-        if (primaryLanguage === 'id') {
-            languageCode = 'id'; // Jika bahasa sistem adalah Indonesia, gunakan bahasa Indonesia
-        }
-        const redirectUrl = `http://127.0.0.1:4000/${languageCode}/`; // Ganti "website.com" dengan domain Anda
-        window.location.href = redirectUrl;
-        }
-
-        // Panggil fungsi getSystemLanguage untuk mendapatkan bahasa sistem pengguna
-        const userLanguage = getSystemLanguage();
-
-        // Panggil fungsi redirectToLanguagePage untuk melakukan pengalihan berdasarkan bahasa sistem pengguna
-        redirectToLanguagePage(userLanguage);
+        function getSystemLanguage(){const e=navigator.language||navigator.userLanguage;return e.split("-")[0]}function redirectToLanguagePage(e){let t="en";"id"===e&&(t="id");const n=`http://bgtg.github.io/${t}/`;window.location.href=n}const userLanguage=getSystemLanguage();redirectToLanguagePage(userLanguage);
     </script>
 </body>
 </html>

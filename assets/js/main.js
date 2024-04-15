@@ -309,11 +309,21 @@ window.addEventListener('load', function() {
                         duration: .5,
                         onComplete: function() {
                             let tl = gsap.timeline();
-                            tl.from('.trigAnim', {
-                                duration: 2,
-                                opacity: 0,
-                                ease: 'power2.out',
-                                y: 50
+                            tl.to('.faded', {
+                                duration: .5,
+                                opacity: 1,
+                            });
+                            tl.to('.trigAnim', {
+                                duration: .5,
+                                opacity: 1,
+                                y: 0,
+                                ease: 'power2.out'
+                            });
+                            tl.to('.trigAnimNav', {
+                                duration: .5,
+                                opacity: 1,
+                                x: 0,
+                                ease: 'power2.out'
                             });
                         }
                     })
